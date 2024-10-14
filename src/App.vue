@@ -1,10 +1,13 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-import 'https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/components/select/select.js';
+/* Kokeilin lisätä myös komponenttityylejä Web Component -kirjastosta, mutta en saanut tätä sen pidemmälle 
+import 'https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/components/select/select.js';*/
 
 import MuniDataSelector from "./components/MuniDataSelector.vue";
 
+import kuntaData from './assets/data.json';
+/*
 const kuntaData = { 
   "columns": [
     {"code":"Vuosi","text":"Vuosi","type":"t"},
@@ -25,7 +28,7 @@ const kuntaData = {
     {"key":["2022","KU019","SSS"],"values":["215","2","2"]},
     {"key":["2022","KU046","SSS"],"values":["36","1","3"]}
   ]
-};
+}; */
 
 const selectedYear = ref('2022');
 const selectedArea = ref('');
@@ -68,6 +71,7 @@ const areas = computed(() => {
       Dataa ei löytynyt valinnoilla.
     </div>
   </div>
+  <div><p>Vuonna 2022 vieraskielisten opetukseen osallistuvien oppilaiden mediaani oli <b>7 oppilasta</b> Suomen kunnista.</p></div>
 </template>
 
 <style scoped>

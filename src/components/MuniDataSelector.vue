@@ -10,18 +10,18 @@ const props = defineProps({
     selectedAge: String,
 });
 
-const emit = defineEmits(['emit:SelectedYear', 'update:SelectedArea', 'update:SelectedAge']);
+const emit = defineEmits(['update:selectedYear', 'update:selectedArea', 'update:selectedAge']);
 
 const updateYear = (event) => {
-    emit(updateSelectedYear, event.target.value);
+    emit('update:selectedYear', event.target.value);
 };
 
 const updateArea = (event) => {
-    emit(updateSelectedArea, event.target.value);
+    emit('update:selectedArea', event.target.value);
 };
 
 const updateAge = (event) => {
-    emit(updateSelectedAge, event.target.value);
+    emit('update:selectedAge', event.target.value);
 }
 
 </script>
@@ -30,23 +30,23 @@ const updateAge = (event) => {
     <div>
         <label>
             Year:
-            <wa-select :value="selectedYear" @change="UpdateYear">
+            <select :value="selectedYear" @change="updateYear">
                 <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-            </wa-select>
+            </select>
         </label>
 
         <label>
             Area:
-            <wa-select :value="selectedArea" @change="UpdateArea">
+            <select :value="selectedArea" @change="updateArea">
                 <option v-for="area in areas" :key="area" :value="area">{{ area }}</option>
-            </wa-select>
+            </select>
         </label>
 
         <label>
             Age:
-            <wa-select :value="selectedAge" @change="UpdateAge">
-                <option v-for="age in ages" :key="age" :value="age"></option>
-            </wa-select>
+            <select :value="selectedAge" @change="updateAge">
+                <option v-for="age in ages" :key="age" :value="age"> {{ age }}</option>
+            </select>
         </label>
     </div>
 </template>
