@@ -1,5 +1,5 @@
 # Vieraskielisten oppilaiden kuntakone
 
-Tervetuloa tutustumaan opiskelijamäärien tilastointikoneeseen! Tämä työkalu tarjoaa kattavan katsauksen Suomen vieraskielisiin kuntien opiskelijamääriin vuodelta 2022, hyödyntäen Tilastokeskuksen dataa. Voit tarkastella eri ikäluokkien opiskelijamääriä ja saada käsityksen millaisesta datasta ja rajauksista on kyse. Datassa Tilastokeskuksella on enemmän muuttujia, mutta valintavaihtoehtoja on asetettu näkymään vain tuorein (hieman jo vanhahko) oppilasdata 2022.
+Tervetuloa tutustumaan opiskelijamäärien tilastointikoneeseen! Tämä työkalu tarjoaa kattavan katsauksen Suomen vieraskielisiin opiskelijamääriin vuodelta 2022, hyödyntäen Tilastokeskuksen dataa. Voit tarkastella eri ikäluokkien opiskelijamääriä ja saada käsityksen millaisesta datasta ja rajauksista on kyse. Datassa Tilastokeskuksella on enemmän muuttujia, mutta valintavaihtoehtoja on asetettu näkymään vain tuorein (hieman jo vanhahko) oppilasdata 2022.
 
 Huomioithan, että tämä on raaka prototyyppi, ja esimerkiksi mobiilioptimointi on vielä kesken. Kehityskohteista on App.vue-tiedostossa kommentti koodissa ja tavoitekomponentin url. Tavoite oli saada juurikin datavalintaa hallitseva select-komponentti vähemmän kolhoksi. Tämä versio riittää toimittajalle ensimmäiseen esittelyyn, juuri ja juuri.
