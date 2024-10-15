@@ -31,8 +31,8 @@ const kuntaData = {
 }; */
 
 const selectedYear = ref('2022');
-const selectedArea = ref('');
-const selectedAge = ref('SSS');
+const selectedArea = ref('Akaa');
+const selectedAge = ref('Kaikki ikäluokat');
 
 const filteredData = computed(() => {
   return kuntaData.data.filter(item => item.key[0] === selectedYear.value && 
@@ -51,7 +51,7 @@ const areas = computed(() => {
     <MuniDataSelector
       :years="['2022']"
       :areas="areas"
-      :ages="['SSS']"
+      :ages="['Kaikki ikäluokat']"
       v-model:selectedYear="selectedYear"
       v-model:selectedArea="selectedArea"
       v-model:selectedAge="selectedAge"
