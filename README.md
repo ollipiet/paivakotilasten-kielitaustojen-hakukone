@@ -1,5 +1,5 @@
-# Vue 3 + Vite
+# Vieraskielisten oppilaiden kuntakone
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Tervetuloa tutustumaan opiskelijamäärien tilastointikoneeseen! Tämä työkalu tarjoaa kattavan katsauksen Suomen vieraskielisiin kuntien opiskelijamääriin vuodelta 2022, hyödyntäen Tilastokeskuksen dataa. Voit tarkastella eri ikäluokkien opiskelijamääriä ja saada käsityksen millaisesta datasta ja rajauksista on kyse. Datassa Tilastokeskuksella on enemmän muuttujia, mutta valintavaihtoehtoja on asetettu näkymään vain tuorein (hieman jo vanhahko) oppilasdata 2022.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Huomioithan, että tämä on raaka prototyyppi, ja esimerkiksi mobiilioptimointi on vielä kesken. Kehityskohteista on App.vue-tiedostossa kommentti koodissa ja tavoitekomponentin url. Tavoite oli saada juurikin datavalintaa hallitseva select-komponentti vähemmän kolhoksi. Tämä versio riittää toimittajalle ensimmäiseen esittelyyn, juuri ja juuri.

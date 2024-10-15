@@ -1,8 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-/* Kokeilin lisätä myös komponenttityylejä Web Component -kirjastosta, mutta en saanut tätä sen pidemmälle 
+/* Kokeilin lisätä myös komponenttityylejä Web Component -kirjastosta, mutta en saanut Select-laatikkoa sen pidemmälle 
 import 'https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/components/select/select.js';*/
+
+import 'https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/components/card/card.js';
 
 import MuniDataSelector from "./components/MuniDataSelector.vue";
 
@@ -57,14 +59,14 @@ const areas = computed(() => {
       v-model:selectedAge="selectedAge"
     />
     <div v-if="filteredData.length > 0">
-      <h2>Selected Data:</h2>
+      <h2>Rajaamasi kunta näyttää tältä:</h2>
       <ul>
-        <li v-for="item in filteredData" :key="item.key.join('-')">
+        <wa-card class="card-basic" v-for="item in filteredData" :key="item.key.join('-')">
           Alue: {{ item.key[1] }}, 
-          Yhteensä: {{ item.values[0] }}, 
-          Ulkomaisia: {{ item.values[1] }}, 
-          Vieraskielisiä: {{ item.values[2] }}
-        </li>
+          Oppilaita yhteensä: {{ item.values[0] }}, 
+          Oppilaista ulkomaisia: {{ item.values[1] }}, 
+          Oppilaista vieraskielisiä: {{ item.values[2] }}
+        </wa-card>
       </ul>
     </div>
     <div v-else>

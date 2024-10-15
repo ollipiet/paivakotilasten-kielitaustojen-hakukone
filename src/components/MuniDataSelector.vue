@@ -29,24 +29,30 @@ const updateAge = (event) => {
 <template>
     <div>
         <label>
-            Year:
+            Vuosi:
             <select :value="selectedYear" @change="updateYear">
                 <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
             </select>
         </label>
 
         <label>
-            Area:
+            Kunta:
             <select :value="selectedArea" @change="updateArea">
                 <option v-for="area in areas" :key="area" :value="area">{{ area }}</option>
             </select>
         </label>
 
         <label>
-            Age:
+            Ikäryhmä:
             <select :value="selectedAge" @change="updateAge">
                 <option v-for="age in ages" :key="age" :value="age"> {{ age }}</option>
             </select>
         </label>
     </div>
 </template>
+
+<style scoped>
+    select {
+        font-size: 1.4em;
+    }
+</style>
